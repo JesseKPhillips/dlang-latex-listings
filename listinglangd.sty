@@ -1,0 +1,46 @@
+%% Listings definition for D programming language
+%% Author : Jesse Phillips <Jesse.K.Phillips+D@gmail.com>
+
+\ProvidesFile{lstlangd.sty}
+             [2012/09/23 0.1 listings language file for Dlang]
+\lst@definelanguage{D}{
+  % Keywords
+  morekeywords=[1]{
+    abstract, alias, align, auto, body, break, cast, catch, class, const,
+	 continue, debug, delegate, delete, deprecated, do, else, enum, export,
+	 false, final, finally, for, foreach, foreach_reverse, function, goto, if,
+	 immutable, import, in, inout, interface, invariant, is, lazy, macro, mixin,
+	 module, new, nothrow, null, out, override, package, pragma, private,
+	 protected, public, pure, ref, return, shared, static, struct, super,
+	 switch, synchronized, template, this, throw, true, try, typedef, typeid,
+	 typeof, union, unittest, volatile, while, with
+},
+  % Special identifiers, common functions
+  morekeywords=[2]{enforce},
+  % Ugly identifiers
+  morekeywords=[3]{
+    __DATE__, __EOF__, __FILE__, __LINE__, __TIMESTAMP__, __TIME__, __VENDOR__,
+    __VERSION__, __ctfe, __gshared, __monitor, __thread, __vptr, _argptr,
+    _arguments, _ctor, _dtor
+},
+  % Basic types
+  morekeywords=[4]{
+	 byte, ubyte, short, ushort, int, uint, long, ulong, cent, ucent, void,
+	 bool, bit, float, double, real, ushort, int, uint, long, ulong, float,
+	 char, wchar, dchar, string, wstring, dstring, ireal, ifloat, idouble,
+	 creal, cfloat, cdouble, size_t, ptrdiff_t, sizediff_t, equals_t, hash_t
+},
+  % Strings
+  morestring=[b]{"},
+  morestring=[b]{'},
+  morestring=[b]{`},
+  % Comments
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morecomment=[s][\color{blue}]{/**}{*/},
+  morecomment=[n]{/+}{+/},
+  morecomment=[n][\color{blue}]{/++}{+/},
+  % Options
+  sensitive=true
+}
+\endinput
